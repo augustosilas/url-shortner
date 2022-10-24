@@ -2,13 +2,15 @@
    "scripts": {
       "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
       "typeorm": "typeorm-ts-node-commonjs -d src/infra/database/data-source.ts",
-      "migrate:create": "ts-node ./node_modules/.bin/typeorm migration:generate -d src/infra/database/data-source.ts"
+      "migrate:create": "ts-node ./node_modules/.bin/typeorm migration:generate -d src/infra/database/data-source.ts",
+      "build": "rimraf dist && tsc"
    },
    "dependencies": {
       "dotenv": "^16.0.3",
       "express": "^4.18.2",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.13",
+      "rimraf": "^3.0.2",
       "typeorm": "0.3.10"
    },
    "devDependencies": {
